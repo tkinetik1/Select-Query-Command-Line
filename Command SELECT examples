@@ -1,0 +1,52 @@
+
+
+SQL SELECT Command query examples:
+
+  We have one table for Alternative Sport Companies and one Table for Associated Prices.
+  
+  
+Alternative Sport Companies
+  +---------+-------------------------+------------------============--+
+| RIC     | COMPANY                 | Associated Sport                 |
++---------+-------------------------+----------------------------------+
+| 6758.T  | Burton                  | Snowboarding                     |
+| GOOG.O  | Spy                     | Snowbarding, Biking, Motocross   |
+| GS.N    | Metolius                | Rock Climbing                    |
+| INFY.BO | Specialized             | Biking                           |
+| VOD.L   | Volcom                  | Snowboarding, Surfing, Skating   |
++---------+-------------------------+----------------------------------+
+
+Associated Prices
+  +---------+-------------------------+------------------============--+
+| av. cost | Merchandise             | Associated Sport                 |
++---------+-------------------------+----------------------------------+
+| 450  | Snowboards, Outerwear   | Snowboarding                     |
+| 125  | Goggles, Outerwear      | Snowbarding, Biking, Motocross   |
+| 900  | Climbing Gear           | Rock Climbing                    |
+| 1800 | Mountain Bikes          | Biking                           |
+| 600  | Skate, Surf, Snowbards | Snowboarding, Surfing, Skating    |
++---------+-------------------------+----------------------------------+
+
+SELECT QUERY Whole Table -
+
+mysql> select * from Associated Prices;
+mysql> select * from Alternative Sport Companies;
+
+Finding count of rows in tables.
+
+mysql> select count(*) from Associated Prices;
+
+Matching / Finding SELECT QUERY
+
+mysql> select * from Associated Prices where av. cost LIKE '450%';
+
+Ordering results.
+
+mysql> select * from Associated Prices order by Associated Sport;
+
+SELECTING data row to row.
+
+mysql> select * from Associated Prices order by Associated SPort LIMIT 0,3;
+
+
+Reference: http://javarevisited.blogspot.com/2011/10/selct-command-sql-query-example.html
